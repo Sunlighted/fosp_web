@@ -149,9 +149,18 @@ body {
   margin: 0 !important;
 }
 
-#interpolation-image-wrapper {
-  width: 100%;
+#interpolation-image-wrapper-1 {
+  text-align: center;
+  height: 100%;
 }
-#interpolation-image-wrapper img {
+#interpolation-image-wrapper-1 img {
+  border-radius: 5px;
+}
+
+#interpolation-image-wrapper-2 {
+  text-align: center;
+  height: 100%;
+}
+#interpolation-image-wrapper-2 img {
   border-radius: 5px;
 }

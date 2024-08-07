@@ -91,6 +91,8 @@
           <h1 class="title is-1 publication-title">FOSP: Fine-tuning Offline Safe Policy through World Models</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
+              <a href="">Anonymous Authors</a><sup></sup></span>
+            <!-- <span class="author-block">
               <a href="">Chenyang Cao</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="">Yucheng Xin</a><sup>1</sup>,</span>
@@ -98,28 +100,28 @@
               <a href="">Silang Wu</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="">Longxiang He</a><sup>1</sup>,
+              <a href="https://say-hello2y.github.io/">Longxiang He</a><sup>1</sup>,
             </span>
             <span class="author-block">
               <a href="">Zichen Yan</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="">Junbo Tan</a><sup>1</sup>,
+              <a href="https://scholar.google.com/citations?user=kV-h3B8AAAAJ&hl=en&oi=ao">Junbo Tan</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="">Xueqian Wang</a><sup>1</sup>
-            </span>
+              <a href="https://scholar.google.com/citations?user=h9dN_ykAAAAJ&hl=en&oi=ao">Xueqian Wang</a><sup>1</sup>
+            </span> -->
           </div>
 
-          <div class="is-size-5 publication-authors">
+          <!-- <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>SIGS, Tsinghua University,</span>
-          </div>
+          </div> -->
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://arxiv.org/pdf/2407.04942"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -128,12 +130,21 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href=""
+                <a href="https://arxiv.org/abs/2407.04942"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
                 </a>
               </span>
               <!-- Code Link. -->
@@ -302,9 +313,13 @@
     <div class="columns is-centered">
       <!-- Unified Title -->
       <div class="column is-full">
-        <h2 class="title is-3">Real world experiments in a different scenario</h2>
+        <h2 class="title is-3">Real world experiments comparing with the baseline</h2>
         <p>
-          We shows a different example of the tasks. After training, the FOSP is deployed in real-world directly and for fine-tuning.
+          We compare FOSP with a strong baseline: SafeDreamer, which is currently the SOTA model for visual safety reinforcement learning.
+          We shows a different example of the tasks. The standard task can be finished after offline training by FOSP and SafeDreamer. 
+          After training, the FOSP is deployed in real-world directly and fine-tuned 40 steps.
+          Keeping all other conditions the same, we also fine-tunes SafeDreamer 40 steps in these transfer tasks.
+          While SafeDreamer is struggling to finish the tasks, FOSP can easily avoid the obstacles and find the goals.
         </p>
       </div>
     </div>
@@ -320,7 +335,7 @@
         <div class="content">
           <h3 class="title is-4">Standard task</h3>
           <p>
-            Using FOSP to plan a safe route to the goal after offline training with enough data. 
+            Using offline trained model to plan a safe route to the goal with enough data. 
             It shows capability to finish the standard task.
           </p>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
@@ -337,63 +352,16 @@
   </div>
 
     <!-- 2 -->
-    <div class="container is-max-desktop">
-  
-      <div class="columns is-centered">
-        <!-- fail1 -->
-        <div class="column">
-          <div class="content">
-            <h3 class="title is-4">Transfer 1a</h3>
-            <p>
-              Change the shape of obstacles. Before fine-tuning. 
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/2fail1.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-  
-        <!-- fail2. -->
-        <div class="column">
-          <div class="content">
-            <h3 class="title is-4">Transfer 2a</h3>
-            <p>
-              Change the shape of goal. Before fine-tuning. 
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/2fail2.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-        
-        <!-- fail3 -->
-        <div class="column">
-          <div class="content">
-            <h3 class="title is-4">Transfer 3a</h3>
-            <p>
-              Change the number of obstacles. Before fine-tuning. 
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/2fail3.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
 
-      <!-- 3 -->
     <div class="container is-max-desktop">
   
       <div class="columns is-centered">
         <!-- suc1 -->
         <div class="column">
           <div class="content">
-            <h3 class="title is-4">Transfer 1b</h3>
+            <h3 class="title is-4">Transfer 1</h3>
             <p>
-              Change the shape of obstacles. After fine-tuning. 
+              Change the shape of obstacles while using FOSP. 
             </p>
             <video id="new-module-video" controls playsinline height="100%">
               <source src="./static/videos/2suc1.mp4"
@@ -405,9 +373,9 @@
         <!-- suc2. -->
         <div class="column">
           <div class="content">
-            <h3 class="title is-4">Transfer 2b</h3>
+            <h3 class="title is-4">Transfer 2</h3>
             <p>
-              Change the shape of goal. After fine-tuning. 
+              Change the shape of goal while using FOSP. 
             </p>
             <video id="new-module-video" controls playsinline height="100%">
               <source src="./static/videos/2suc2.mp4"
@@ -419,9 +387,9 @@
         <!-- suc3 -->
         <div class="column">
           <div class="content">
-            <h3 class="title is-4">Transfer 3b</h3>
+            <h3 class="title is-4">Transfer 3</h3>
             <p>
-              Change the number of obstacles. After fine-tuning. 
+              Change the number of obstacles while using FOSP. 
             </p>
             <video id="new-module-video" controls playsinline height="100%">
               <source src="./static/videos/2suc3.mp4"
@@ -431,6 +399,140 @@
         </div>
       </div>
     </div>
+
+      <!-- 3 -->
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <!-- fail1 -->
+        <div class="column">
+          <div class="content">
+            <h3 class="title is-4">Transfer 1(baseline)</h3>
+            <p>
+              Change the shape of obstacles while using baseline. 
+            </p>
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/2fail1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+  
+        <!-- fail2. -->
+        <div class="column">
+          <div class="content">
+            <h3 class="title is-4">Transfer 2(baseline)</h3>
+            <p>
+              Change the shape of goal while using baseline. 
+            </p>
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/2fail2.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+        
+        <!-- fail3 -->
+        <div class="column">
+          <div class="content">
+            <h3 class="title is-4">Transfer 3(baseline)</h3>
+            <p>
+              Change the number of obstacles while using baseline. 
+            </p>
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/2fail3.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Dataset</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Simple successful example</h3>
+        <div class="content has-text-justified">
+          <p>
+            We collect the dataset by the following way: using 3Dconnexion to teleopreate the robot arm and camera to peception throughout all the experiment process.
+            We collect trajectories and then mix them together for training. A trajectory that robot The robot almost reaches the target but doesn't reach it accurately is shown:
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_start.jpg"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+            <p>Start Frame</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-1">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info is-centered"
+                  id="interpolation-slider"
+                  step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_end.jpg"
+                class="interpolation-image"
+                alt="Interpolation end reference image."/>
+            <p class="is-bold">End Frame</p>
+          </div>
+        </div>
+        <br/>
+        <div class="content has-text-justified">
+          <p>
+            A trajectory that robot successfully reaches the goal without collision is shown:
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_start-1.jpg"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+            <p>Start Frame</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper-2">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info is-centered"
+                  id="interpolation-slider-2"
+                  step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_end-1.jpg"
+                class="interpolation-image"
+                alt="Interpolation end reference image."/>
+            <p class="is-bold">End Frame</p>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+        <div class="content has-text-justified">
+          <p>
+            The following picture shows four different trajectories: whether the target was reached and whether constraints were violated. Among them, the red-framed part shows 
+            when the robotic arm collides with obstacles and the yellow-framed part indicates the robotic arm reaches the goal.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <!-- <div class="column is-3 has-text-centered"> -->
+          <img src="./static/images/data.jpg"
+                class="interpolation-image"
+                alt="Experienment data"/>
+        </div>
+    
+
+      </div>
+    </div>
+  </div>
 </section>
 
     <!-- Animation. -->
@@ -451,41 +553,116 @@
               </p>
             </div>
             <div class="columns is-vcentered interpolation-panel">
-              <!-- <div class="column is-3 has-text-centered"> -->
               <img src="./static/images/env.png"
                     class="interpolation-image"
                     alt="Experienment env"/>
-                <!-- <p>Start Frame</p>
-              </div>
-              <div class="column interpolation-video-column">
-                <div id="interpolation-image-wrapper">
-                  Loading...
-                </div>
-                <input class="slider is-fullwidth is-large is-info"
-                      id="interpolation-slider"
-                      step="1" min="0" max="100" value="0" type="range">
-              </div>
-              <div class="column is-3 has-text-centered">
-                <img src="./static/images/interpolate_end.jpg"
-                    class="interpolation-image"
-                    alt="Interpolation end reference image."/>
-                <p class="is-bold">End Frame</p>
-              </div> -->
             </div>
             <br/>
-            <!--/ Interpolating. -->
 
-            <!-- <div class="column">
-              <div class="content">
-                <h3 class="title is-4">Simulation experiment results</h3>
-                <p>
-                  Offline experimental results. Comparing FOSP to baselines across five image-based safety tasks. The results for all three algorithms are obtained after training for 1 million steps.
-                </p>
-                <img src="./static/images/offline.png"
-                    class="interpolation-image"
-                    alt="offline"/>
-                </video>
-              </div> -->
+            <div class="content has-text-justified">
+              <p>
+                These are some visual representations of our algorithm in real-world tasks. 
+                The agent's observations before and after are saved as animations. 
+                The agent also makes decisions based on first-person image-only information.
+              </p>
+            </div>
+            <div class="columns is-centered">
+              <div class="column">
+                <div class="content">
+                  <h3 class="title is-5">SafePointGoal1(front)</h3>
+                  <img src="./static/images/goal1-1.gif"
+                            class="interpolation-image"
+                            alt="tasks"/>
+                </div>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <h3 class="title is-5">SafePointGoal1(back)</h3>
+                  <img src="./static/images/goal1-2.gif"
+                            class="interpolation-image"
+                            alt="tasks"/>
+                </div>
+              </div>
+            </div>
+            
+            <div class="columns is-centered">
+              <div class="column">
+                <div class="content">
+                  <h3 class="title is-5">SafePointGoal2(front)</h3>
+                  <img src="./static/images/goal2-1.gif"
+                            class="interpolation-image"
+                            alt="tasks"/>
+                </div>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <h3 class="title is-5">SafePointGoal2(back)</h3>
+                  <img src="./static/images/goal2-2.gif"
+                            class="interpolation-image"
+                            alt="tasks"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <!-- suc1 -->
+              <div class="column">
+                <div class="content">
+                  <h3 class="title is-5">SafePointButton1(front)</h3>
+                  <img src="./static/images/button1.gif"
+                            class="interpolation-image"
+                            alt="tasks"/>
+                </div>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <h3 class="title is-5">SafePointButton1(back)</h3>
+                  <img src="./static/images/button2.gif"
+                            class="interpolation-image"
+                            alt="tasks"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <!-- suc1 -->
+              <div class="column">
+                <div class="content">
+                  <h3 class="title is-5">SafePointPush1(front)</h3>
+                  <img src="./static/images/push1.gif"
+                            class="interpolation-image"
+                            alt="tasks"/>
+                </div>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <h3 class="title is-5">SafePointPush1(back)</h3>
+                  <img src="./static/images/push2.gif"
+                            class="interpolation-image"
+                            alt="tasks"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <!-- suc1 -->
+              <div class="column">
+                <div class="content">
+                  <h3 class="title is-5">SafeCarGoal2(front)</h3>
+                  <img src="./static/images/carg1.gif"
+                            class="interpolation-image"
+                            alt="tasks"/>
+                </div>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <h3 class="title is-5">SafeCarGoal2(back)</h3>
+                  <img src="./static/images/carg2.gif"
+                            class="interpolation-image"
+                            alt="tasks"/>
+                </div>
+              </div>
+            </div>
 
             <!-- Re-rendering. -->
             <div class="column">
@@ -571,12 +748,12 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <!-- <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre> -->
+    <pre><code>@article{cao2024fospfinetuningofflinesafe,
+      title={FOSP: Fine-tuning Offline Safe Policy through World Models}, 
+      author={Chenyang Cao and Yucheng Xin and Silang Wu and Longxiang He and Zichen Yan and Junbo Tan and Xueqian Wang},
+      year={2024},
+      eprint={2407.04942}
+}</code></pre>
   </div>
 </section>
 
