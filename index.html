@@ -175,81 +175,6 @@
   </div>
 </section>
 
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section> -->
-
-
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -316,9 +241,9 @@
         <h2 class="title is-3">Real world experiments comparing with the baseline</h2>
         <p>
           We compare FOSP with a strong baseline: SafeDreamer, which is currently the SOTA model for visual safety reinforcement learning.
-          We shows a different example of the tasks. The standard task can be finished after offline training by FOSP and SafeDreamer. 
+          We show a different example of the tasks. The standard task can be finished after offline training by FOSP and SafeDreamer. 
           After training, the FOSP is deployed in real-world directly and fine-tuned 40 steps.
-          Keeping all other conditions the same, we also fine-tunes SafeDreamer 40 steps in these transfer tasks.
+          Keeping all other conditions the same, we also fine-tune SafeDreamer 40 steps in these transfer tasks.
           While SafeDreamer is struggling to finish the tasks, FOSP can easily avoid the obstacles and find the goals.
         </p>
       </div>
@@ -336,7 +261,7 @@
           <h3 class="title is-4">Standard task</h3>
           <p>
             Using offline trained model to plan a safe route to the goal with enough data. 
-            It shows capability to finish the standard task.
+            It shows the capability to finish the standard task.
           </p>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/2suc.mp4"
@@ -460,8 +385,8 @@
         <h3 class="title is-4">Simple successful example</h3>
         <div class="content has-text-justified">
           <p>
-            We collect the dataset by the following way: using 3Dconnexion to teleopreate the robot arm and camera to peception throughout all the experiment process.
-            We collect trajectories and then mix them together for training. A trajectory that robot The robot almost reaches the target but doesn't reach it accurately is shown:
+            We collect the dataset in the following way: using 3Dconnexion to teleoperate the robot arm and camera to perception throughout all the experiment process.
+            We collect trajectories and then mix them together for training. A trajectory that the robot almost reaches the target but doesn't reach it accurately is shown:
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
@@ -489,7 +414,7 @@
         <br/>
         <div class="content has-text-justified">
           <p>
-            A trajectory that robot successfully reaches the goal without collision is shown:
+            A trajectory that the robot successfully reaches the goal without collision is shown:
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
