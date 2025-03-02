@@ -90,9 +90,9 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">FOSP: Fine-tuning Offline Safe Policy through World Models</h1>
           <div class="is-size-5 publication-authors">
+<!--             <span class="author-block">
+              <a href="">Anonymous Authors</a><sup></sup></span> -->
             <span class="author-block">
-              <a href="">Anonymous Authors</a><sup></sup></span>
-            <!-- <span class="author-block">
               <a href="">Chenyang Cao</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="">Yucheng Xin</a><sup>1</sup>,</span>
@@ -110,7 +110,7 @@
             </span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=h9dN_ykAAAAJ&hl=en&oi=ao">Xueqian Wang</a><sup>1</sup>
-            </span> -->
+            </span>
           </div>
 
           <!-- <div class="is-size-5 publication-authors">
@@ -242,7 +242,7 @@
         <p>
           We compare FOSP with a strong baseline: SafeDreamer, which is currently the SOTA model for visual safety reinforcement learning.
           We show a different example of the tasks. The standard task can be finished after offline training by FOSP and SafeDreamer. 
-          After training, the FOSP is deployed in real-world directly and fine-tuned 40 steps.
+          After training, the FOSP is deployed in the real world directly and fine-tuned for 40 steps.
           Keeping all other conditions the same, we also fine-tune SafeDreamer 40 steps in these transfer tasks.
           While SafeDreamer is struggling to finish the tasks, FOSP can easily avoid the obstacles and find the goals.
         </p>
@@ -260,7 +260,7 @@
         <div class="content">
           <h3 class="title is-4">Standard task</h3>
           <p>
-            Using offline trained model to plan a safe route to the goal with enough data. 
+            Using the offline trained model to plan a safe route to the goal with enough data. 
             It shows the capability to finish the standard task.
           </p>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
@@ -334,7 +334,7 @@
           <div class="content">
             <h3 class="title is-4">Transfer 1(baseline)</h3>
             <p>
-              Change the shape of obstacles while using baseline. 
+              Change the shape of obstacles while using the baseline. 
             </p>
             <video id="matting-video" controls playsinline height="100%">
               <source src="./static/videos/2fail1.mp4"
@@ -348,7 +348,7 @@
           <div class="content">
             <h3 class="title is-4">Transfer 2(baseline)</h3>
             <p>
-              Change the shape of goal while using baseline. 
+              Change the shape of the goal while using the baseline. 
             </p>
             <video id="matting-video" controls playsinline height="100%">
               <source src="./static/videos/2fail2.mp4"
@@ -362,7 +362,7 @@
           <div class="content">
             <h3 class="title is-4">Transfer 3(baseline)</h3>
             <p>
-              Change the number of obstacles while using baseline. 
+              Change the number of obstacles while using the baseline. 
             </p>
             <video id="matting-video" controls playsinline height="100%">
               <source src="./static/videos/2fail3.mp4"
@@ -385,7 +385,7 @@
         <h3 class="title is-4">Simple example</h3>
         <div class="content has-text-justified">
           <p>
-            We collect the dataset in the following way: using 3Dconnexion to teleoperate the robot arm and camera to perception throughout all the experiment process.
+            We collect the dataset in the following way: using 3Dconnexion to teleoperate the robot arm and the camera to perception throughout the experiment process.
             We collect trajectories and then mix them together for training. A trajectory that the robot almost reaches the target but doesn't reach it accurately is shown:
           </p>
         </div>
@@ -472,7 +472,7 @@
             <h3 class="title is-4">Environment and tasks</h3>
             <div class="content has-text-justified">
               <p>
-                Different tasks and agents in the simulation and real-world. Simulation tasks: we consider four different tasks in the simulation: Push1,
+                Different tasks and agents in the simulation and the real world. Simulation tasks: we consider four different tasks in the simulation: Push1,
                 Goal1, Button1, Goal2. Agent type: Car (upper) and Point (lower). Real-robot setup: we use raw images as inputs and enable the robotic arm to complete
                 obstacle avoidance tasks safely.
               </p>
@@ -672,7 +672,7 @@
     <!--/ Concurrent Work. -->
 
 
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{cao2024fospfinetuningofflinesafe,
@@ -682,7 +682,7 @@
       eprint={2407.04942}
 }</code></pre>
   </div>
-</section> -->
+</section>
 
 
 <footer class="footer">
